@@ -10,31 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <style>
-        /* ==========================================================================
-           ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ САЙТА (ТОЧЬ-В-ТОЧЬ ИЗ ZZZZZZZ.HTML)
-           ========================================================================== */
         
         body {
-            background-color: #F2FEFF;   /* Светло-бирюзовый фон всего сайта */
-            color: #000;                 /* Основной цвет текста — черный */
+            background-color: #F2FEFF;   
+            color: #000;                 
             font-family: Vollkorn BC;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Шапка сайта (Header) */
+
         .site-header {
-            background: #F2FEFF;            /* Белая подложка под шапку */
+            background: #F2FEFF;            
             padding: 10px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 2px solid #C3E1E1; /* Тонкая бирюзовая линия снизу */
+            border-bottom: 2px solid #C3E1E1; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
-        /* Блок с логотипом */
         .logo-block {
             display: flex;
             flex-direction: column;
@@ -43,7 +39,7 @@
             color: inherit;
         }
         .logo-img {
-            width: 55px;                 /* Размер главного логотипа */
+            width: 55px;               
             height: auto;
         }
         .logo-text {
@@ -55,36 +51,34 @@
             font-weight: bold;
         }
 
-        /* Главное меню навигации */
         .main-nav {
             display: flex;
-            gap: 20px;                   /* Расстояние между кнопками меню */
+            gap: 20px;                   
         }
         .nav-btn {
-            background: #C3E1E1;         /* Фирменный нежно-бирюзовый цвет кнопок */
+            background: #C3E1E1;         
             color: #000;
             text-decoration: none;
             padding: 8px 30px;
-            border-radius: 20px;         /* Округлые кнопки */
+            border-radius: 20px;         
             font-size: 15px;
-            text-transform: uppercase;   /* Текст заглавными буквами */
+            text-transform: uppercase;   
             font-weight: bolder;
             font-family: Vollkorn BC;
             letter-spacing: 0.5px;
             transition: background 0.3s ease;
         }
         .nav-btn:hover, .nav-btn.active {
-            background: #9ECECE;         /* Затемнение кнопок при наведении / активная кнопка */
+            background: #9ECECE;         
         }
 
-        /* Иконки соцсетей и профиля справа */
         .header-icons {
             display: flex;
             align-items: center;
             gap: 15px;
         }
         .icon-link {
-            color: #C3E1E1;              /* Цвет иконок по умолчанию */
+            color: #C3E1E1;              
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -94,7 +88,7 @@
         .icon-link svg {
             width: 26px;
             height: 26px;
-            fill: currentColor;          /* Чтобы цвет менялся через CSS hover */
+            fill: currentColor;         
         }
         .icon-link img {
             width: 26px;
@@ -103,7 +97,6 @@
             display: block;
         }
 
-        /* Хлебные крошки / Текущий путь */
         .breadcrumb {
             padding: 15px 60px 0 60px;
             font-size: 14px;
@@ -112,9 +105,6 @@
             text-transform: lowercase;
         }
 
-        /* ==========================================================================
-           УНИКАЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ОТЗЫВОВ
-           ========================================================================== */
         .title-section {
             text-align: center;
             margin-top: 30px;
@@ -138,7 +128,6 @@
             position: relative;
         }
 
-        /* Сетка отзывов (2 колонки) */
         .reviews-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -154,7 +143,6 @@
             }
         }
 
-        /* Карточка отзыва */
         .review-card {
             background: #E1EFEF;
             border: 1px solid #C3E1E1;
@@ -167,7 +155,6 @@
             position: relative; 
         }
 
-        /* Кнопка удаления своего отзыва */
         .delete-review-btn {
             position: absolute;
             top: 15px;
@@ -225,17 +212,15 @@
             font-family: 'Vollkorn SC', serif;
         }
 
-        /* Текстовая линия под отзывом (вместо плашки) */
         .review-text-box {
             font-size: 15px;
             line-height: 1.4;
             color: #000;
             min-height: 50px;
             padding-bottom: 12px;
-            border-bottom: 2px solid #C3E1E1; /* Линия под текстом отзыва */
+            border-bottom: 2px solid #C3E1E1; 
         }
 
-        /* Кнопка "ОСТАВИТЬ ОТЗЫВ" */
         .action-btn-container {
             display: flex;
             justify-content: center;
@@ -260,9 +245,6 @@
             background-color: #9ECECE;
         }
 
-        /* ==========================================================================
-           МОДАЛЬНОЕ ОКНО ФОРМЫ
-           ========================================================================== */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -380,7 +362,7 @@
         </nav>
 
         <div class="header-icons">
-            <a href="https://s00.yaplakal.com/pics/pics_original/7/4/5/20352547.jpg" class="icon-link" title="Макс">
+            <a href="https://i.cdn01.ru/files/users/images/c6/77/c67728190329b2c0a4959ee47cde3565.jpg" class="icon-link" title="Макс">
                 <img src="image/max.png" alt="MAX">
             </a>
             <a href="https://vk.com/deadix" class="icon-link" title="ВКонтакте">
@@ -447,7 +429,6 @@
     </div>
 
     <script>
-        // Автоматическое перенаправление с иконки профиля (из zzzzzzz.html)
         document.getElementById('profileLink').addEventListener('click', function(e) {
             e.preventDefault();
             const currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -458,7 +439,6 @@
             }
         });
 
-        // База отзывов из графического макета
         const initialReviews = [
             {
                 email: "system1",
@@ -470,7 +450,7 @@
             {
                 email: "system2",
                 name: "Иван Л.",
-                text: "Подарили вязанного кота. Сделал дырку. Очень понравилось!",
+                text: "Подарили вязанного кота. Очень понравилось!",
                 rating: 5,
                 avatar: "image/3.png"
             },
@@ -544,7 +524,6 @@
 
         renderAllReviews();
 
-        // Управление модальным окном
         const modalOverlay = document.getElementById('modalOverlay');
         const openModalBtn = document.getElementById('openModalBtn');
         const closeModalBtn = document.getElementById('closeModalBtn');
