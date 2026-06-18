@@ -5,31 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петелька - Каталог</title>
     <style>
-        /* ==========================================================================
-           ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ САЙТА (Скопировано из главной zzzzzzz.html)
-           ========================================================================== */
         
         body {
-            background-color: #F2FEFF;   /* Светло-бирюзовый фон всего сайта */
-            color: #000;                 /* Основной цвет текста — черный */
+            background-color: #F2FEFF;   
+            color: #000;                 
             font-family: Vollkorn BC;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Шапка сайта (Header) */
         .site-header {
             background: #F2FEFF;            
             padding: 10px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 2px solid #C3E1E1; /* Тонкая бирюзовая линия снизу */
+            border-bottom: 2px solid #C3E1E1; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
-        /* Блок с логотипом */
         .logo-block {
             display: flex;
             flex-direction: column;
@@ -49,13 +44,12 @@
             font-weight: bold;
         }
 
-        /* Главное меню навигации */
         .main-nav {
             display: flex;
             gap: 20px;                   
         }
         .nav-btn {
-            background: #C3E1E1;         /* Фирменный нежно-бирюзовый цвет кнопок */
+            background: #C3E1E1;        
             color: #000;
             text-decoration: none;
             padding: 8px 30px;
@@ -70,7 +64,6 @@
             background: #9ECECE;         
         }
 
-        /* Иконки справа */
         .header-icons {
             display: flex;
             align-items: center;
@@ -86,7 +79,6 @@
             display: block;
         }
 
-        /* Хлебные крошки */
         .breadcrumb {
             padding: 15px 60px 0 60px;
             font-size: 14px;
@@ -94,7 +86,6 @@
             text-transform: lowercase;
         }
 
-        /* Кнопки действий */
         .action-btn {
             background: #C3E1E1;
             border: none;
@@ -116,9 +107,6 @@
             transform: scale(0.98);
         }
 
-        /* ==========================================================================
-           УНИКАЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ КАТАЛОГА СО СЛАЙДЕРОМ
-           ========================================================================== */
 
         .catalog-container {
             max-width: 1200px;
@@ -137,7 +125,6 @@
             font-weight: bolder;
         }
 
-        /* Главная обертка слайдера со стрелками по бокам */
         .slider-wrapper {
             display: flex;
             align-items: center;
@@ -146,14 +133,12 @@
             position: relative;
         }
 
-        /* Окно видимости слайдов */
         .slider-viewport {
             overflow: hidden;
             width: 100%;
             padding: 15px 5px;
         }
 
-        /* Лента товаров, которая будет двигаться */
         .slider-track {
             display: flex;
             gap: 30px;
@@ -161,7 +146,6 @@
             will-change: transform;
         }
 
-        /* Кнопки-стрелочки управления слайдером */
         .slider-arrow {
             background: #C3E1E1;
             border: none;
@@ -192,7 +176,6 @@
             box-shadow: none;
         }
 
-        /* Карточка товара (Каждого отдельного слайда) */
         .product-card {
             background: #E1EFEF;
             border-radius: 30px;
@@ -201,8 +184,8 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            width: 260px; /* Фиксированная ширина карточки */
-            flex-shrink: 0; /* Чтобы карточки не сжимались в ленте */
+            width: 260px; 
+            flex-shrink: 0; 
             box-shadow: 0 8px 20px rgba(0,0,0,0.04);
             transition: transform 0.3s ease;
         }
@@ -268,7 +251,7 @@
         </nav>
 
         <div class="header-icons">
-            <a href="https://s00.yaplakal.com/pics/pics_original/7/4/5/20352547.jpg" class="icon-link" title="Чат"><img src="image/max.png" alt="Макс"></a>
+            <a href="https://i.cdn01.ru/files/users/images/c6/77/c67728190329b2c0a4959ee47cde3565.jpg" class="icon-link" title="Чат"><img src="image/max.png" alt="Макс"></a>
             <a href="https://vk.com/deadix" class="icon-link" title="ВКонтакте"><img src="image/vk.png" alt="ВКонтакте"></a>
             <a href="https://t.me/d3ad1xx" class="icon-link" title="Telegram"><img src="image/tg.png" alt="Telegram"></a>
             <a href="profile.html" class="icon-link" id="profileLink" title="Личный кабинет"><img src="image/profile.png" alt="Личный кабинет"></a>
@@ -386,12 +369,8 @@
     </main>
 
 <script>
-        // ИСПРАВЛЕНО: Маленькая буква l в названии localStorage
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        
-        // ==========================================
-        // ЛОГИКА РАБОТЫ ИНТЕРАКТИВНОГО СЛАЙДЕРА
-        // ==========================================
+
         const track = document.getElementById('sliderTrack');
         const btnPrev = document.getElementById('arrowPrev');
         const btnNext = document.getElementById('arrowNext');
@@ -406,7 +385,6 @@
 
         function updateSlider() {
             const slideWidth = getSlideWidth();
-            // ИСПРАВЛЕНО: Использование косых кавычек (шаблонных строк) для корректного рассчета стилей
             track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
             
             const viewportWidth = document.querySelector('.slider-viewport').getBoundingClientRect().width;
@@ -438,9 +416,6 @@
         window.addEventListener('resize', updateSlider);
         setTimeout(updateSlider, 100);
 
-        // ==========================================
-        // ЛОГИКА ДОБАВЛЕНИЯ В КОРЗИНУ
-        // ==========================================
         const buyButtons = document.querySelectorAll('.buy-btn');
 
         buyButtons.forEach(button => {
@@ -461,22 +436,18 @@
                 const toyPrice = parseInt(this.getAttribute('data-price'));
                 const toyImg = this.getAttribute('data-img');
 
-                // Создаем отдельный ключ для промежуточной корзины текущего пользователя
                 const cartKey = 'userCart_' + currentUser.email;
                 let cart = JSON.parse(localStorage.getItem(cartKey)) || { items: [], totalPrice: 0 };
 
-                // Добавляем товар в массив корзины
                 cart.items.push({ name: toyName, price: toyPrice, img: toyImg });
                 cart.totalPrice += toyPrice;
 
-                // Сохраняем обновленную корзину
                 localStorage.setItem(cartKey, JSON.stringify(cart));
 
                 alert(`Игрушка "${toyName}" успешно добавлена в корзину!\nПосмотреть её можно в Личном Кабинете.`);
             });
         });
 
-        // Навигация профиля
         document.getElementById('profileLink').addEventListener('click', function(e) {
             e.preventDefault();
             if (currentUser) {
